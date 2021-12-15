@@ -1,5 +1,6 @@
 import React from 'react'
 import { Modal, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import { useState } from 'react/cjs/react.development';
 import Rating from './Rating';
 
@@ -38,6 +39,8 @@ const Addmovie = ({add}) => {
 
     return (
         <div>
+            <Link to='/'> Home </Link>
+
             <form onSubmit={handlesubmit}>
             <Button variant="primary" onClick={handleShow}> Add new movie </Button>
 

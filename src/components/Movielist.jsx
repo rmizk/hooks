@@ -1,19 +1,19 @@
 import React from 'react'
 import Moviecard from './Moviecard'
-
-
-const Movielist = ({film}) => {
-
+import { Link } from 'react-router-dom'
 
 
 
+const Movielist = ({film,edit}) => {
 
     return (
-        <div style={{display:"flex" , flexWrap:"wrap", justifyContent:"space-around"}}>
-            {film.map(el=>
-            <Moviecard movie={el}/> 
-             )}
-            
+        <div>
+            <Link to={'/Addmovie'}> Add movie </Link>
+                <div style={{display:"flex" , flexWrap:"wrap", justifyContent:"space-around"}}>
+                {film.map((el,i)=>
+                <Moviecard key={i} edit={edit} movie={el}/> 
+                )}
+                </div>
         </div>
     )
 }
